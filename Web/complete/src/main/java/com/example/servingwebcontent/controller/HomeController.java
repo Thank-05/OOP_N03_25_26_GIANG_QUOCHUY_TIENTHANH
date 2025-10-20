@@ -1,4 +1,4 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class GreetingController {
+public class HomeController {
 
 	/**
 	 * Maps the root path "/" and "/greeting" to the "greeting" template.
 	 * Passes a 'name' attribute to the Thymeleaf template.
-	 * * @param name The name to greet, defaults to "World".
+	 * @param name The name to greet, defaults to "World".
 	 * @param model The model to pass attributes to the view.
 	 * @return The name of the Thymeleaf template ("greeting").
 	 */
 	@GetMapping({"/", "/greeting"})
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		
-		// Add the 'name' attribute to the Model, which Thymeleaf can access
+		// Thêm thuộc tính 'name' vào Model để Thymeleaf có thể truy cập
 		model.addAttribute("name", name);
 
-		// Returns the template name (will resolve to src/main/resources/templates/greeting.html)
+		// Trả về tên của template Thymeleaf ("greeting"), sẽ tìm src/main/resources/templates/greeting.html
 		return "greeting";
 	}
 

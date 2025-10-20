@@ -39,10 +39,7 @@ public class ProductService {
      * Tìm tất cả sản phẩm thuộc về một danh mục cụ thể.
      * @param categoryId ID của danh mục cần tìm.
      * @return Danh sách các sản phẩm thuộc danh mục đó.
-     */
-    public List<Product> findByCategoryId(Long categoryId) {
-        return productRepository.findByCategoryId(categoryId);
-    }
+     *
 
     /**
      * Tìm kiếm sản phẩm theo từ khóa trong tên.

@@ -1,4 +1,4 @@
-package com.example.servingwebcontent.controllers;
+package com.example.servingwebcontent.controller;
 
 import com.example.servingwebcontent.exceptions.InsufficientStockException;
 import com.example.servingwebcontent.exceptions.ResourceNotFoundException;
